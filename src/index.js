@@ -13,7 +13,7 @@ function waterfall(tasks, callback) {
     (function next(error) {
         var args, nextTask;
 
-        if (called !== true) {
+        if (called === false) {
             if (error) {
                 called = true;
                 callback(error);
@@ -22,7 +22,9 @@ function waterfall(tasks, callback) {
                     called = true;
                     callback.apply(null, arguments);
                 } else {
-                    nextTask = tasks[index++];
+                    nextTask = tasks[index];
+                    index += 1;
+
                     args = fastSlice(arguments, 1);
                     args[args.length] = next;
 
@@ -34,5 +36,5 @@ function waterfall(tasks, callback) {
                 }
             }
         }
-    }(undefined));
+    }());
 }
