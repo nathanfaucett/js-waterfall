@@ -1,0 +1,36 @@
+{
+  "name": "waterfall",
+  "version": "0.0.1",
+  "description": "waterfall for the browser and node.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nathanfaucett/waterfall.git"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "test": "npm run test-node",
+    "test-node": "node ./test | ./node_modules/.bin/tap-spec",
+    "test-node-raw": "node ./test",
+    "test-browser-local": "zuul --local 8080 --ui tape -- ./test"
+  },
+  "keywords": [
+    "waterfall",
+    "waterfall.js"
+  ],
+  "author": "Nathan Faucett",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "get_prototype_of": "git://github.com/nathanfaucett/get_prototype_of.git",
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-jsbeautifier": "^0.2.7",
+    "tap-spec": "^4.0.0",
+    "tape": "^4.0.0",
+    "zuul": "^3.0.0"
+  },
+  "dependencies": {
+    "is_function": "git://github.com/nathanfaucett/is_function.git",
+    "fast_slice": "git://github.com/nathanfaucett/fast_slice.git"
+  }
+}
