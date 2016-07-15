@@ -1,5 +1,5 @@
-var isFunction = require("is_function"),
-    fastSlice = require("fast_slice");
+var isFunction = require("@nathanfaucett/is_function"),
+    fastSlice = require("@nathanfaucett/fast_slice");
 
 
 module.exports = waterfall;

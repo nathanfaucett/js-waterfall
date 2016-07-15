@@ -4,8 +4,8 @@ waterfall
 waterfall for the browser and node.js
 
 ```javascript
-var waterfall = require("waterfall"),
-    assert = require("assert");
+var waterfall = require("@nathanfaucett/waterfall"),
+    assert = require("@nathanfaucett/assert");
 
 
 waterfall([
